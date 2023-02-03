@@ -1,0 +1,114 @@
+<!-- <div class="container d-flex justtify-content-center align-items-center">
+  <mat-card>
+    <mat-card-content>
+  
+  <div class="mainstyle">
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4">
+  <mat-form-field style="color: white !important;" appearance="outline">
+    <mat-label>Email</mat-label>
+    <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+           placeholder="Ex. pat@example.com">
+    <mat-hint>Errors appear instantly!</mat-hint>
+    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+      Please enter a valid email address
+    </mat-error>
+    <mat-error *ngIf="emailFormControl.hasError('required')">
+      Email is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+</div>
+<div class="col-sm-4"></div>
+</div>
+
+<div class="row">
+<div class="col-sm-4"></div>
+  <div class="col-sm-4">
+  <mat-form-field appearance="outline">
+    <mat-label>Enter your password</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'" [formControl]="passwordFormControl">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+     
+      
+    <mat-error *ngIf="passwordFormControl.hasError('required')">
+      
+    </mat-error>
+      
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+  </div>
+  <div class="col-sm-4"></div>
+</div>
+</div></mat-card-content>
+</mat-card>
+</div> -->
+<div class="bg">
+<mat-card class="stt">
+  <div class="row">
+<div class="col-4"></div>
+<div class="col-4">
+  <img class="img" src="../../assets/mm.jpg">
+  <h3 style="text-align: center;color: white"> Login to continue</h3>
+
+  
+    <mat-form-field  class="fieldstyle" appearance="outline">
+      <mat-label>Email</mat-label>
+     <!-- // <input   matInput type="email" [formControl]="emailFormControl" > -->
+      
+      <!-- <div *ngIf="emailFormControl?.invalid && emailFormControl?.touched">
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                  Email <strong>Required</strong>
+                </mat-error>
+              <mat-error *ngIf="emailFormControl.hasError('email')">
+                Invalid <strong>Email</strong>
+              </mat-error>
+    </div> -->
+    <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+      Please enter a valid email address
+    </mat-error>
+    <mat-error *ngIf="emailFormControl.hasError('required')">
+      Email is <strong>required</strong>
+    </mat-error>
+    </mat-form-field>
+
+</div>
+<div class="col-4"></div>
+</div>
+  <div class="row">
+  <div class="col-4"></div>
+  <div class="col-4">
+    <form class="example-form">
+      <mat-form-field class="fieldstyle" appearance="outline">
+        <mat-label>Enter your password</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'" [formControl]="passwordFormControl">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+     
+    <mat-error *ngIf="passwordFormControl.hasError('required')">    
+    </mat-error>
+      <mat-icon >{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+      </mat-form-field>
+    </form>
+  </div>
+  <div class="col-4"></div>
+</div>
+
+<div class="row">
+  <div class="col-4"></div>
+  <div class="col-4">
+
+    <button  (click)="get(emailFormControl.value,passwordFormControl.value)"  style="color: green ; background-color: white;" mat-stroked-button class="fieldstyle" color="accent">Login</button>
+    
+
+  </div>
+  <div class="col-4"> 
+    <button mat-stroked-button color="accent" class="signupbtn" routerLink="/signup" >Sign Up</button></div>
+</div>
+
+
+
+</mat-card>
+</div>

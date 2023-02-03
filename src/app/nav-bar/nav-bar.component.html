@@ -1,0 +1,11 @@
+<mat-toolbar style="background-color:#171572">
+       
+      <h2 class="title">M.M.</h2>          
+    <span class="spacer"></span>
+    <button style="color: white;" mat-button [matMenuTriggerFor]="menu">menu</button>
+
+                <mat-menu #menu="matMenu">
+                <button mat-menu-item>Profile</button>
+                <button routerLink="/login" mat-menu-item>logout</button>
+                </mat-menu>
+  </mat-toolbar>

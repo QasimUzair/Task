@@ -1,0 +1,61 @@
+<div class="inn">
+    
+    <form [formGroup]="formm">
+        <button   style=" margin-left:86%;"  routerLinkActive="active current" routerLink="/log"  type="submit" class="btn btn-primary">Back</button>
+   
+        <h3 style="text-align: center;"> Sign Up Form</h3><br><br>
+       
+        <div >
+            <div  class="form-Group">
+                <label  for="email">First Name</label>
+        <input formControlName="firstname" type="text" class="form-control" placeholder="First Name" >
+        <div *ngIf="formm?.get('firstname')?.touched && formm?.get('firstname')?.invalid"  class="alert alert-danger">
+                <div *ngIf="firstname?.errors?.['required']">First Name Required
+                </div>
+                
+        </div>
+                <br>
+                <label  for="email">Last Name</label>
+        <input formControlName="lastname" type="text" class="form-control" placeholder="Last Name" >
+        <div *ngIf="formm?.get('lastname')?.touched && formm?.get('lastname')?.invalid"  class="alert alert-danger">
+                <div *ngIf="lastname?.errors?.['required']">Last Name Required
+                </div>
+                
+        
+        </div> 
+            </div>
+            </div>
+            <br>
+     <div  class="form-Group">
+        <label  for="email">Email</label>
+        <input formControlName="username" type="email" class="form-control"   placeholder="Email" >
+        <div *ngIf="formm?.get('username')?.touched && formm?.get('username')?.invalid"  class="alert alert-danger">
+                <div *ngIf="username?.errors?.['required']">Email Required
+                </div>
+                 <div *ngIf="username?.errors?.['email']">Invalid Formate
+                </div>
+        
+        </div>
+    </div>
+<br>
+    <div class="form-Group">
+        <label  for="password">Password</label>
+        <input formControlName="password" type="password" class="form-control"  placeholder="Password" >
+        <div *ngIf="formm?.get('password')?.touched && formm?.get('password')?.invalid"  class="alert alert-danger">
+            <div *ngIf="password?.errors?.['required']">Password Required
+        </div>
+        <div *ngIf="password?.errors?.['minlength']">Minimum 8 digit
+        </div>
+        
+    </div>
+    
+    </div>
+    <br><br> <br>
+    <button style="margin-left: 40%;" (click)="Signup()" type="submit" class="btn btn-primary">Submit</button>
+
+    
+    
+
+    </form>
+</div>
+

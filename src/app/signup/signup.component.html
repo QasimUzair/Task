@@ -1,0 +1,81 @@
+
+<div class="bg">
+    <mat-card class="stt">
+      <form [formGroup]="form">
+      <div class="row">
+        
+    <div class="col-4"></div>
+    <div class="col-4">
+      
+      <h3 style="text-align: center;color: white"> SignUp Form</h3>
+    
+
+      <mat-form-field  class="fieldstyle" appearance="outline">
+        <mat-label >Full Name</mat-label>
+        <input  type="text" matInput formControlName="name">
+        <mat-error *ngIf="form?.get('name')?.touched && form?.get('name')?.invalid ">
+          Full Name <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      
+        <mat-form-field  class="fieldstyle" appearance="outline">
+          <mat-label>Email</mat-label>
+          <input  type="email" matInput formControlName="email" >
+          <div *ngIf="form?.get('email')?.touched && form?.get('email')?.invalid ">
+                  <mat-error *ngIf=" email?.errors?.['required']">
+                    <strong>Email Required</strong> 
+                  </mat-error>
+                  <mat-error *ngIf=" email?.errors?.['invalid']">
+                    Enter Valid <strong>Email</strong>
+                  </mat-error>
+                  <mat-error *ngIf=" email?.errors?.['shouldBeUnique']">
+                    This <strong>Email</strong> is Already Taken 
+                  </mat-error>
+          </div>
+          
+        </mat-form-field>
+    
+    </div>
+    <div class="col-4"></div>
+    </div>
+      <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4">
+        <form class="example-form">
+          <mat-form-field class="fieldstyle" appearance="outline">
+            <mat-label >Create Password</mat-label>
+        <input matInput formControlName="password">
+        <mat-error *ngIf="form?.get('password')?.touched && form?.get('password')?.invalid">
+           Password <strong>required</strong>
+        </mat-error>
+          </mat-form-field>
+          <mat-form-field class="fieldstyle" appearance="outline">
+            <mat-label>Confirm Password</mat-label>
+        <input matInput formControlName="confirm">
+        <mat-error *ngIf="form?.get('confirm')?.touched && form?.get('confirm')?.invalid">
+           Confirm Password <strong>Required</strong>
+        </mat-error>
+          </mat-form-field>
+        </form>
+      </div>
+      <div class="col-4"></div>
+    </div>
+    
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4">
+    
+        <button (click)="Add()" style="color: green ; background-color: white;" mat-stroked-button class="fieldstyle" color="accent">SignUp</button>
+        <div style="margin-top:10px; width:75% ; margin-left:12.5%;" *ngIf=" ismtch!=false" class="alert alert-danger" >Password MissMatch</div>
+        
+
+      </div>
+      <div class="col-4">
+         <button mat-stroked-button routerLink="/login" style="margin-left: 80%; color: white; position: absolute; top:550px" color="accent">Back <-</button></div>
+    </div>
+    
+    
+  </form>
+    </mat-card>
+    </div>

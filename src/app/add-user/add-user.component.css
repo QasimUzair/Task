@@ -1,0 +1,26 @@
+
+.dailogBox{
+    border: solid 5px black;
+    border-radius: 5px;
+    height: 500px;
+    overflow-x: hidden;
+    width: 500px;
+    text-align: center;
+    padding-top: 10px;
+}
+.formStyle{
+
+        width:100% ;
+    padding-top:10px ;
+    padding-bottom: 15px;
+    
+
+}
+.inputStyle{
+    width: 80%;
+}
+.buttonStyle{
+    width: 80%;
+    color: white;
+    background-color: darkblue;
+}

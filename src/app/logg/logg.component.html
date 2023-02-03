@@ -1,0 +1,81 @@
+<div class="main">
+
+<mat-card class="cz" >
+    <mat-card-content>
+     
+        <form [formGroup]="form123"  (ngSubmit)="login()">
+        
+            <img style="border :0.1em solid white; width: 130px; margin-left: 35%;margin-top: 20px;margin-bottom: 15px;" src="../../assets/mm.jpg">
+           <h3 style="text-align: center;color: white"> Login to continue</h3>
+     <div  class="form-Group">
+        <aside id="info-block">
+            <section class="file-marker">
+              <div>
+                <div class="box-title">
+                  Email
+                </div>
+                <div class="box-contents">
+                  <div id="audit-trail">
+                    <input style="background-color: green; border: 0.1ch solid green;color: white;" formControlName="username" type="email" id="uname" class="form-control">
+                  </div>
+                </div>
+              </div>
+            </section>
+          </aside>
+          
+        <div id="errr" *ngIf="form123?.get('username')?.touched && form123?.get('username')?.invalid"  class="alert alert-danger">
+            <div id="errr" *ngIf="username?.errors?.['required']">Email Required
+        </div>
+        <div *ngIf="username?.errors?.['email']">Not Email Format
+        </div>
+        
+    </div>
+        </div>
+<br>
+    <div class="form-Group" >
+          <aside id="info-block">
+            <section class="file-marker">
+              <div>
+                <div class="box-title" >
+                  Password
+                </div>
+                <div class="box-contents">
+                  
+                    
+                  <div>
+                    <input style="background-color: green; border: 0.1ch solid green;color: white;" formControlName="password" type="password"  id="psw" value="" class="form-control">
+                  </div>
+                    
+                  </div>
+                
+              </div>
+            </section>
+          </aside>
+        <div *ngIf="form123?.get('password')?.touched && form123?.get('password')?.invalid"  class="alert alert-danger">
+            <div *ngIf="password?.errors?.['required']">Password Required
+        </div>
+        <div *ngIf="password?.errors?.['minlength']">Minimum Length Required 8 digit
+        </div>
+        
+    </div>
+    
+    </div>
+    <br> <br>
+
+    
+            
+
+    <button class="but" mat-stroked-button style="border: 0.3ch solid white;background-color: white; color: black;position: absolute; top:470px;margin-left: 10%;" (click)="onSubmit()" type="submit" color="primary">Login</button>
+    <div *ngIf="form123.errors" class="alert alert-danger ">
+        Email || Password Required
+</div>
+    
+    <div class="fixed-top"><button  mat-stroked-button  style=" margin-left:75%;position: absolute; top:600px;;border: 0.3ch solid white;color: white;"  routerLinkActive="active current" routerLink="/sign"  type="submit" class="btn btn-primary">SignUp</button>
+        </div>
+       
+</form></mat-card-content>
+  </mat-card>
+ 
+    
+
+</div>

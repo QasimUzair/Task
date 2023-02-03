@@ -1,0 +1,35 @@
+
+.sidebar{
+    background-color:#171572;
+    color: white;
+    width: 15%;
+    height: 100vh;
+    text-align: center;
+    
+    font-size:xx-large,
+    
+}
+.example-container {
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    border: 1px solid #555;
+  }
+.mainpagestyle{
+    width: 100%;
+    height: 100vh;
+    
+    
+}
+
+.menu{
+    color: white;
+    
+
+
+}
+
+.main{
+   
+    overflow: hidden;
+}

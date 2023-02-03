@@ -1,0 +1,44 @@
+<div class="dailogBox">     
+    <div class="row">
+      <div class="col-4"></div> 
+      <div class="col-4">            
+      <form [formGroup]="addform">
+                <h2>Add User</h2>
+        <form class="formStyle">
+            <mat-form-field class="inputStyle">
+            <mat-label>Name</mat-label>
+            <input  matInput type="text" matInput formControlName="name" >
+            <mat-error *ngIf="addform?.get('name')?.touched && addform?.get('name')?.invalid ">
+             Name <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+          <br> <br>             
+          <mat-form-field class="inputStyle"  >     
+            <mat-label>Email</mat-label>
+            <input matInput type="email" matInput formControlName="email"  >
+            <mat-error *ngIf="addform?.get('email')?.touched && addform?.get('email')?.invalid ">
+            Email <strong>required / Invalid</strong>
+            </mat-error>             
+          </mat-form-field>
+          <mat-form-field class="inputStyle"  >       
+            <mat-label >Create Password</mat-label>
+            <input matInput formControlName="password">
+            <mat-error *ngIf="addform?.get('password')?.touched && addform?.get('password')?.invalid">
+            Password <strong>required</strong>
+            </mat-error>                      
+          </mat-form-field>
+          <mat-form-field class="inputStyle"  >
+            <mat-label>Confirm Password</mat-label>
+            <input matInput formControlName="confirm">
+            <mat-error *ngIf="addform?.get('confirm')?.touched && addform?.get('confirm')?.invalid">
+            Confirm Password <strong>Required</strong>
+          </mat-error>                               
+          </mat-form-field>
+        </form>
+           <button   class="buttonStyle" (click)="addData()"  mat-raised-button>Add</button>
+          <mat-error  *ngIf=" ismtch!=false" class="alert alert-danger" >Password MissMatch</mat-error>          
+      </form>
+          </div>
+           <div class="col-4"></div>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+mainstyle{ 
+    border: 0.2em solid black;
+    width: 30%;
+    height: 600px;
+    margin-left: 40%;
+    margin-top: 5%;
+    padding: 30px;
+    background-color: green;
+    color: white;
+    
+
+} 
+.bg{
+    background-image: url("../../assets/bgimg.jpg");
+        width: 100%; 
+        height: 100vh ;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+}
+.stt{
+    width: 27%;
+    border: 0.1ch solid darkgreen;
+    
+    padding-top:2%;
+    height: 600px;
+    margin-top: 5%;
+    background-color: green;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5), 0 10px 30px 0 rgba(0, 0, 0, 0.30);
+}
+.img{
+    border :0.1em solid white; 
+    width: 130px; 
+    margin-left: 35%;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    
+}
+
+.fieldstyle{
+    width: 75%;
+    margin-left: 12%;
+    
+}
+
+.signupbtn{
+    margin-left: 77%; color: green; margin-top: 23%;
+    background-color: white;
+    
+}
+.loginbtn{
+    
+    color: green ;
+
+     background-color: white;
+}

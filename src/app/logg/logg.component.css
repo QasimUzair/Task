@@ -1,0 +1,70 @@
+
+    .cz {
+    margin-left: 0%;margin-top: 0%; height: 650px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5), 0 10px 30px 0 rgba(0, 0, 0, 0.30);
+    background-color: green;
+    width: 32%;border: 0.1em solid green ; font-family: Roboto, "Helvetica Neue", sans-serif;}
+    .main{
+        background-image: url("../../assets/bgimg.jpg");
+        width: 100%; 
+        height: 100vh ;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+       
+    
+    }
+    #info-block section {
+        border: 2px solid white;
+        width: 75%;
+        margin-left: 13%;
+        border-radius :10px;
+    }
+    
+    .file-marker > div {
+        padding: 0 3px;
+        height: 60px;
+        width: 100%;
+        margin-top: -0.8em;
+        border: 0.2 em solid green;
+        
+    }
+    .box-title {
+        background: green;
+        color: white;
+        display: inline-block;
+        padding: 0 2px;
+      
+    }
+    .tx{
+        background-color:green;
+        color: white;
+        /* border:none;  */
+        border-style: hidden;
+        /* border-color:rgb(12, 139, 12); */
+        /* display: none; */
+        outline: none;
+    }
+    #errr{
+       height: 10px;      
+    }
+.but{
+        border:0.5em solid white;
+        color:rgb(12, 139, 12);
+        width: 70%;
+        padding: 1px;
+        border-radius: 10px;
+        margin-right: 15%; ;
+    }
+    .nwww{
+        position:absolute;
+        top: 340px;
+        border: 2px solid white;
+        width: 75%;
+        margin-left: 13%;
+        border-radius :10px;
+    }
+   
