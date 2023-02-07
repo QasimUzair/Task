@@ -1,0 +1,43 @@
+<div class="dailogBox">     
+    <div class="row">
+      <div class="col-4"></div> 
+      <div class="col-4">            
+      <form [formGroup]="apiAddform">
+                <h2>Add API</h2>
+        <form class="formStyle">
+            <mat-form-field class="inputStyle">
+            <mat-label>id</mat-label>
+            <input  matInput type="text" matInput formControlName="id" >
+            <mat-error *ngIf="apiAddform?.get('id')?.touched && apiAddform?.get('id')?.invalid ">
+             id <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+          <br> <br>             
+          <mat-form-field class="inputStyle"  >     
+            <mat-label>UserID</mat-label>
+            <input matInput  matInput formControlName="userid"  >
+            <mat-error *ngIf="apiAddform?.get('userid')?.touched && apiAddform?.get('userid')?.invalid ">
+            UserID <strong>required / Invalid</strong>
+            </mat-error>             
+          </mat-form-field>
+          <mat-form-field class="inputStyle"  >       
+            <mat-label >title</mat-label>
+            <input matInput formControlName="title">
+            <mat-error *ngIf="apiAddform?.get('title')?.touched && apiAddform?.get('title')?.invalid">
+            Title <strong>required</strong>
+            </mat-error>                      
+          </mat-form-field>
+          <mat-form-field class="inputStyle"  >
+            <mat-label>Body</mat-label>
+            <input matInput formControlName="body">
+            <mat-error *ngIf="apiAddform?.get('body')?.touched && apiAddform?.get('body')?.invalid">
+            Confirm Password <strong>Required</strong>
+          </mat-error>                               
+          </mat-form-field>
+        </form>
+           <button   class="buttonStyle" (click)="addData()"  mat-raised-button>Add</button>         
+      </form>
+          </div>
+           <div class="col-4"></div>
+    </div>
+</div>

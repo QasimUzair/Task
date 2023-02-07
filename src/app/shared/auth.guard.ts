@@ -19,7 +19,7 @@ export class AuthGuard implements CanActivate {
       
     }
     
-    alert("Hey You!... Your not Logged in Yet")
+    alert("Hey You!... You are not Loggedin Yet")
     this.router.navigate(['login']);
     return false;
   }

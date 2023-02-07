@@ -33,7 +33,9 @@ import { MainContentComponent } from './main-content/main-content.component';
 import { MatDialogModule,MatDialogRef,MatDialog } from '@angular/material/dialog';
 import { AddUserComponent } from './add-user/add-user.component';
 import { MatSortModule } from '@angular/material/sort';
-
+import { HttpTaskComponent } from './http-task/http-task.component';
+import { ApiEditDailogComponent } from './api-edit-dailog/api-edit-dailog.component';
+import { ApiAddComponent } from './api-add/api-add.component';
 
 
 
@@ -54,6 +56,9 @@ import { MatSortModule } from '@angular/material/sort';
     MainContentComponent,
     DailogComponent,
     AddUserComponent,
+    HttpTaskComponent,
+    ApiEditDailogComponent,
+    ApiAddComponent,
     
   ],
   imports: [
@@ -75,6 +80,7 @@ import { MatSortModule } from '@angular/material/sort';
     MatPaginatorModule,
     MatDialogModule,
     MatSortModule,
+    // HttpClientModule
    
     
 

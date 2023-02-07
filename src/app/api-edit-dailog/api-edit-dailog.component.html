@@ -1,0 +1,32 @@
+<div class="dailogBox">    
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4"> 
+        <form [formGroup]="apiform">
+          <h2>Edit Form</h2>
+          <form class="formStyle">
+            <mat-form-field class="inputStyle">
+              <mat-label></mat-label>
+              <input  matInput  matInput formControlName="id" placeholder={{id}}>
+              <mat-error *ngIf="apiform?.get('id')?.touched && apiform?.get('id')?.invalid ">
+              id <strong>required</strong>
+            </mat-error>
+            </mat-form-field>
+            <br> <br>
+            <mat-form-field class="inputStyle"  >
+              <mat-label></mat-label>
+                <input matInput type="title" matInput formControlName="title" placeholder={{title}} >
+                <mat-error *ngIf="apiform?.get('title')?.touched && apiform?.get('title')?.invalid ">
+                    title <strong>required</strong>
+                  </mat-error>
+              </mat-form-field>
+          </form>
+            <button class="buttonStyle" (click)="editData()"  mat-raised-button>Edit</button>
+            <!-- <button class="buttonStyle" mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Close</button> -->
+        
+          </form>
+      </div>
+      <div class="col-4"></div>
+    </div>
+  </div>
+  <!-- mat-dialog-close -->
